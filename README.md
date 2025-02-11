@@ -44,16 +44,19 @@ The system consists of three main components:
 
 ## Sequence Diagram
 ![Sequence Diagram](Seq.png)
+
 The **Sequence Diagram** shows the step-by-step interaction between the **User, Server, and Database**:
 - **Login Request → Server Validates Credentials → Face Authentication → OTP Validation → Successful Login → Access System.**
 
 ## State Diagram
 ![State Diagram](state.png)
+
 The **State Diagram** outlines system behavior:
 - **Login → Hardware Initialization → Face Detection → OTP Entry → Secure Work Session → Logout.**
 
 ## Use Case Diagram
 ![Use Case Diagram](UseCaseDiagram2.png)
+
 The **Use Case Diagram** represents key functionalities:
 - **User actions: Registration, Login, Hardware Initialization, Face Detection, OTP Entry, Authentication, Secure Session, Logout.**
 
@@ -64,36 +67,6 @@ The **Use Case Diagram** represents key functionalities:
 - OpenCV for face recognition
 - Twilio API (for OTP services)
 - MySQL/PostgreSQL
-
-### Steps to Run
-1. **Clone the Repository**
-   ```sh
-   git clone https://github.com/your-repo/user-authentication.git
-   cd user-authentication
-   ```
-2. **Create Virtual Environment** (Optional but Recommended)
-   ```sh
-   python -m venv env
-   source env/bin/activate  # On Windows: env\Scripts\activate
-   ```
-3. **Install Dependencies**
-   ```sh
-   pip install -r requirements.txt
-   ```
-4. **Set Up Database**
-   - Configure database settings in `config.py`
-   - Run migrations:
-   ```sh
-   python manage.py migrate  # For Django
-   flask db upgrade  # For Flask with SQLAlchemy
-   ```
-5. **Start the Server**
-   ```sh
-   python app.py  # For Flask
-   python manage.py runserver  # For Django
-   ```
-6. **Access the Application**
-   Open your browser and go to `http://127.0.0.1:5000/` (Flask) or `http://127.0.0.1:8000/` (Django).
 
 ## Technologies Used
 - **Frontend:** HTML, CSS, Bootstrap
@@ -106,10 +79,6 @@ The **Use Case Diagram** represents key functionalities:
 - **AI-Based Anomaly Detection:** Detect unusual login behavior.
 - **Cloud Integration:** Secure storage and access logging.
 - **Multi-OS Compatibility:** Extend support for Mac/Linux systems.
-
-## Contributors
-- Megha Patil, Mehul Ingale, Navaneet Kumar, Siddharth Nilakhe
-- Under guidance of Mrs. MINAL NERKAR
 
 ## References
 - Implementation Paper: "Machine Learning-Based Security System for Office Premises"
